@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>70892932-8CEE-4799-8AB2-703931F03C7D</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SDL-iOS-SampleApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>500D4B45-0DC0-4578-8833-38219E776755</key>
+		<string>https://github.com/sdl/sdl-ios-sampleapp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SDL-iOS-SampleApp.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>500D4B45-0DC0-4578-8833-38219E776755</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sdl/sdl-ios-sampleapp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>500D4B45-0DC0-4578-8833-38219E776755</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>500D4B45-0DC0-4578-8833-38219E776755</string>
+			<key>IDESourceControlWCCName</key>
+			<string>sdl-ios-sampleapp</string>
+		</dict>
+	</array>
+</dict>
+</plist>
