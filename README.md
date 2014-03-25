@@ -95,9 +95,9 @@ pod "SDL-iOS-SDK", "~> 0.1.0"
 #### Under The Hood
 
 - The translation call happens in the performTranslation method in SDLSampleApp.com
-- If you look closely, it's only single asynchronous call:
+- If you look closely, it's one single asynchronous call:
 
-```ruby
+```
 - (void) performTranslation: (NSString*) text
 {
     // Show some progress
