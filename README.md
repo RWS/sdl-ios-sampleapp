@@ -29,7 +29,7 @@ pod "SDL-iOS-SDK", "~> 0.1.0"
 
 #### Setup your API Key once
 
-```ruby
+```objective-c
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
    [[SDL languageCloud] setup:@"<your api key>"]
@@ -39,7 +39,7 @@ pod "SDL-iOS-SDK", "~> 0.1.0"
 
 #### Performing a text translation
 
-```ruby
+```objective-c
  [[SDL languageCloud] translateText:@"Good Morning" from:[NSLocale localeWithLocaleIdentifier:@"en"] to:[NSLocale localeWithLocaleIdentifier:@"fr"] success:^(NSString* translation)
     {
         NSLog(@"Successful Translation: %@", translation);
