@@ -78,6 +78,54 @@ pod "SDL-iOS-SDK", "~> 0.1.0"
 - Then run the project again
 - Everything should build perfectly and the simulator should launch
 
+#### Perform a translation
+
+- The app is pretty simple
+- All it does is ask the user for input in English and it will translate the input the French
+- The first thing you will see when running the app is a popup that will ask you for input:
+<p align="center" >
+  <img src="https://raw.githubusercontent.com/sdl/sdl-ios-sampleapp/master/resources/source.png" alt="SDL" title="SDL">
+</p>
+- If you type something and press the Translate button, the app will perform the translation and popup the result:
+<p align="center" >
+  <img src="https://raw.githubusercontent.com/sdl/sdl-ios-sampleapp/master/resources/target.png" alt="SDL" title="SDL">
+</p>
+- That's all there is to it
+
+#### Under The Hood
+
+- The translation call happens in the performTranslation method in SDLSampleApp.com
+- If you look closely, it's only single asynchronous call:
+
+```ruby
+- (void) performTranslation: (NSString*) text
+{
+    // Show some progress
+    [_spinner startAnimating];
+    
+    [[SDL languageCloud] translateText:text from:[NSLocale localeWithLocaleIdentifier:@"en"] to:[NSLocale localeWithLocaleIdentifier:@"fr"] success:^(NSString* translation)
+     {
+         // Stop the progress first
+         [_spinner stopAnimating];
+
+         // Great, we got something, let's show it
+         [self showTranslation:translation];
+     }
+     failure:^(NSString* errorMessage)
+     {
+         // Stop the progress first
+         [_spinner stopAnimating];
+
+         // Something went wrong, let's show the user what happened
+         [self showTranslation:[NSString stringWithFormat:@"Error: %@", errorMessage]];
+     }];
+}
+```
+- Aside from the progress handling, the call is simple and straight-forward
+- It passes in the **text** input we collected from the user and it specifies the language pair
+- The **from/to** languages are specified as native **NSLocale**'s 
+- And finally, the success block returns the translation and the failure block comes back with an error if something went wrong
+
 ### License
 
 The SDL iOS SDK is made available under the MIT license. Pleace see the LICENSE file 
