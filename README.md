@@ -59,9 +59,8 @@ pod "SDL-iOS-SDK", "~> 0.1.0"
 - You should now see the project loaded in XCode:
 
 <p align="center" >
-  <img src="https://raw.github.com/AFNetworking/AFNetworking/assets/afnetworking-logo.png" alt="AFNetworking" title="AFNetworking">
+  <img src="https://raw.githubusercontent.com/sdl/sdl-ios-sampleapp/master/resources/project.png" alt="SDL" title="SDL">
 </p>
-
 
 
 ### License
