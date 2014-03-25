@@ -97,26 +97,26 @@ pod "SDL-iOS-SDK", "~> 0.1.0"
 - The translation call happens in the performTranslation method in SDLSampleApp.com
 - If you look closely, it's one single asynchronous call:
 
-```
+```ruby
 - (void) performTranslation: (NSString*) text
 {
-    // Show some progress
+    //Show some progress
     [_spinner startAnimating];
     
     [[SDL languageCloud] translateText:text from:[NSLocale localeWithLocaleIdentifier:@"en"] to:[NSLocale localeWithLocaleIdentifier:@"fr"] success:^(NSString* translation)
      {
-         // Stop the progress first
+         //Stop the progress first
          [_spinner stopAnimating];
 
-         // Great, we got something, let's show it
+         //Great, we got something, let's show it
          [self showTranslation:translation];
      }
      failure:^(NSString* errorMessage)
      {
-         // Stop the progress first
+         //Stop the progress first
          [_spinner stopAnimating];
 
-         // Something went wrong, let's show the user what happened
+         //Something went wrong, let's show the user what happened
          [self showTranslation:[NSString stringWithFormat:@"Error: %@", errorMessage]];
      }];
 }
